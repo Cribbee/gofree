@@ -3,6 +3,7 @@ package com.cribbee.gofree.entity;
 import javax.persistence.*;
 import java.util.Date;
 
+
 /**
  * ClassName: User
  * Description: TODO
@@ -15,7 +16,7 @@ import java.util.Date;
 @Table(name = "user")
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
 
@@ -71,7 +72,7 @@ public class User {
         return nick_name;
     }
 
-    public void setNick_name(String nicke_name) {
+    public void setNick_name(String nick_name) {
         this.nick_name = nick_name;
     }
 
@@ -105,5 +106,19 @@ public class User {
 
     public void setCreated_at(Date created_at) {
         this.created_at = created_at;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", usr_name='" + usr_name + '\'' +
+                ", passwd='" + passwd + '\'' +
+                ", nick_name='" + nick_name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", addr='" + addr + '\'' +
+                ", created_at=" + created_at +
+                '}';
     }
 }

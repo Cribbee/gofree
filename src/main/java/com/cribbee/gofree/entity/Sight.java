@@ -1,10 +1,6 @@
 package com.cribbee.gofree.entity;
 
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * ClassName: Sight
@@ -13,13 +9,16 @@ import javax.persistence.Table;
  * Date: 2020/2/18、11:15 AM
  * Version: 1.0
  **/
+
+
+
 @Entity
 @Table(name = "sight")
 public class Sight {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     //所属区
@@ -47,7 +46,7 @@ public class Sight {
     private Integer cmt_num;
 
     //景点描述
-    private String desc;
+    private String sight_desc;
 
     //综合打分
     private Double score;
@@ -92,7 +91,7 @@ public class Sight {
                 ", lng=" + lng +
                 ", lat=" + lat +
                 ", cmt_num=" + cmt_num +
-                ", desc='" + desc + '\'' +
+                ", sight_desc='" + sight_desc + '\'' +
                 ", score=" + score +
                 ", tel='" + tel + '\'' +
                 ", time_cost='" + time_cost + '\'' +
@@ -177,12 +176,12 @@ public class Sight {
         this.cmt_num = cmt_num;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getSight_desc() {
+        return sight_desc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setSight_desc(String sight_desc) {
+        this.sight_desc = sight_desc;
     }
 
     public Double getScore() {

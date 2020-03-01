@@ -1,4 +1,4 @@
-package controller;
+package com.cribbee.gofree.controller;
 
 import com.cribbee.gofree.dao.UserRepository;
 import com.cribbee.gofree.entity.User;
