@@ -9,7 +9,7 @@ package com.cribbee.gofree.util;
  **/
 public enum ResultStatusCode {
     OK(0, "OK"),
-    SYSTEM_ERR(30001, "有错误，找网管");
+    SYSTEM_ERR(500, "有错误，找网管");
 
     private int code;
     private String msg;
