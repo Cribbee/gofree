@@ -9,6 +9,7 @@ class GofreeApplicationTests {
 
 	@Test
 	void contextLoads() {
+		return;
 	}
 
 }

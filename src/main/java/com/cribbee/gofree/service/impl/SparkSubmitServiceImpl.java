@@ -31,7 +31,7 @@ import java.util.concurrent.CountDownLatch;
 public class SparkSubmitServiceImpl implements SparkSubmitService{
     private static Logger log = LoggerFactory.getLogger(SparkSubmitServiceImpl.class);
 
-    @Value("${driver.name:n151}")
+    @Value("${driver.name:localhost}")
     private String driverName;
 
     @Override

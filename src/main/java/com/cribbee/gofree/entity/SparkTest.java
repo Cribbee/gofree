@@ -31,9 +31,9 @@ public class SparkTest {
     private String master;
     @Value("${spark.deploy.mode:cluster}")
     private String deployMode;
-    @Value("${spark.driver.memory:1g}")
+    @Value("${spark.driver.memory:2g}")
     private String driverMemory;
-    @Value("${spark.executor.memory:1g}")
+    @Value("${spark.executor.memory:2g}")
     private String executorMemory;
     @Value("${spark.executor.cores:1}")
     private String executorCores;

@@ -21,10 +21,10 @@
 		<java.version>1.8</java.version>
 		<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
 		<thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
-		<jackson.version>2.8</jackson.version>
+		<maven.test.skip>true</maven.test.skip>
 
 		<spark.version>2.4.5</spark.version>
-		<scala.version>2.11.12</scala.version>
+		<scala.version>2.12.5</scala.version>
 		<hadoop.version>2.7.1</hadoop.version>
 
 	</properties>
@@ -63,20 +63,14 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.4</version>
 			<scope>runtime</scope>
 		</dependency>
 
 
-		<!-- spark -->
-		<!--<dependency>-->
-			<!--<groupId>org.apache.spark</groupId>-->
-			<!--<artifactId>spark-core_2.11</artifactId>-->
-			<!--<version>${spark.version}</version>-->
-		<!--</dependency>-->
-
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-launcher_2.11</artifactId>
+			<artifactId>spark-launcher_2.12</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 
@@ -105,10 +99,13 @@
 
 
 	<build>
+		<finalName>gofree</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+
+
 
 				<configuration>
 					<mainClass>com.cribbee.gofree.GofreeApplication</mainClass>
