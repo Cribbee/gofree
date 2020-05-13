@@ -1,5 +1,6 @@
 package com.cribbee.gofree.service;
 
+import com.cribbee.gofree.entity.Response;
 import com.cribbee.gofree.entity.User;
 import com.cribbee.gofree.util.ResultMsg;
 
