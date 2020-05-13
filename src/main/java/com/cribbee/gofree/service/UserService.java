@@ -1,6 +1,7 @@
 package com.cribbee.gofree.service;
 
 import com.cribbee.gofree.entity.User;
+import com.cribbee.gofree.util.ResultMsg;
 
 public interface UserService {
 
@@ -18,7 +19,7 @@ public interface UserService {
      * @param user
      * @return
      */
-    User register(User user)  throws Exception;
+    ResultMsg register(User user);
 
 
     /**
