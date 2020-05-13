@@ -1,7 +1,6 @@
 package com.cribbee.gofree.service.impl;
 
 import com.cribbee.gofree.dao.UserRepository;
-import com.cribbee.gofree.entity.Response;
 import com.cribbee.gofree.entity.User;
 import com.cribbee.gofree.service.UserService;
 import com.cribbee.gofree.util.ResultMsg;
