@@ -9,7 +9,16 @@ package com.cribbee.gofree.util;
  **/
 public enum ResultStatusCode {
     OK(0, "OK"),
-    SYSTEM_ERR(500, "有错误，找网管");
+    SYSTEM_ERR(500, "有错误，找网管"),
+
+    //登录注册
+    USR_NAME_OR_PASSWD_WRONG(251, "用户名或密码不正确"),
+    USR_NAME_EXISTED(252, "该用户名已存在"),
+    NICK_NAME_EXISTED(253, "该昵称已存在"),
+    PHONE_EXISTED(254, "该手机号已存在"),
+    EMAIL_EXISTED(252, "该邮箱已存在");
+
+
 
     private int code;
     private String msg;
