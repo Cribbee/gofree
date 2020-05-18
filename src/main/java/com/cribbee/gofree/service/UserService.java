@@ -1,8 +1,9 @@
 package com.cribbee.gofree.service;
 
-import com.cribbee.gofree.entity.Response;
+
 import com.cribbee.gofree.entity.User;
 import com.cribbee.gofree.util.ResultMsg;
+import org.springframework.data.jpa.repository.Query;
 
 public interface UserService {
 
@@ -11,7 +12,17 @@ public interface UserService {
      *
      * @param id
      */
-    User getUserBuId(Integer id)  throws Exception;
+    User getUserBuId(Integer id) throws Exception;
+
+
+    /**
+     * @param usr_name
+     * @param pwd
+     * @return
+     * @throws Exception
+     */
+    @Query("select s from User s where s.userName = ?1 and s.pwd = ?2")
+    User findUserByUsrNameAndPwd(String usr_name, String pwd);
 
 
     /**
@@ -24,12 +35,10 @@ public interface UserService {
 
 
     /**
-     * 登录
-     *
-     * @param phone
-     * @param pwd
+     * @param user
      * @return
+     * @throws Exception
      */
-    User login(String phone, String pwd)  throws Exception;
+    ResultMsg login(User user);
 
 }

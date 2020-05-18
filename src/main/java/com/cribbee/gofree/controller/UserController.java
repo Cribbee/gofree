@@ -27,9 +27,16 @@ public class UserController {
 
     @PostMapping("register")
     public ResponseEntity<ResultMsg> register(@RequestBody User user) {
-        ResultMsg resp= userService.register(user);
+        ResultMsg resp = userService.register(user);
+        return new ResponseEntity<>(resp, HttpStatus.CREATED);
+    }
+
+    @PostMapping("login")
+    public ResponseEntity<ResultMsg> login(@RequestBody User user) {
+        ResultMsg resp = userService.login(user);
         return new ResponseEntity<>(resp, HttpStatus.OK);
     }
+
 
     @RequestMapping("hello")
     public String hello() {

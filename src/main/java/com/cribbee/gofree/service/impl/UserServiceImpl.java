@@ -25,20 +25,36 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User getUserBuId(Integer id)  throws Exception {
+    public User getUserBuId(Integer id) {
         return null;
     }
 
     @Override
-    public ResultMsg register(User user){
+    @Transactional
+    public User findUserByUsrNameAndPwd(String usr_name, String pwd) {
+        return null;
+    }
+
+
+    @Override
+    public ResultMsg register(User user) {
         User savedUser = userRepository.save(user);
-        ResultMsg resultMsg=new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(), savedUser);
-        return  resultMsg;
+        ResultMsg resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(), savedUser);
+        return resultMsg;
     }
 
     @Override
-    public User login(String phone, String pwd)  throws Exception{
-        return null;
+    public ResultMsg login(User user) {
+
+        String usr_name = user.getUsr_name();
+        String passwd = user.getPasswd();
+        User user_repo = findUserByUsrNameAndPwd(usr_name, passwd);
+        if (user_repo != null) {
+            ResultMsg resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(), user_repo);
+            return resultMsg;
+        } else
+            return new ResultMsg(ResultStatusCode.SYSTEM_ERR.getErrcode(), ResultStatusCode.SYSTEM_ERR.getErrmsg(), user);
     }
 
 }
+

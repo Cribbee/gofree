@@ -10,6 +10,7 @@ spring:
       hibernate:
         ddl-auto: update
       show-sql: true
+      database-platform: com.cribbee.gofree.util.MysqlConfig
   logging:
     level:
       root: info
