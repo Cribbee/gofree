@@ -21,8 +21,6 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @Autowired
-    private UserRepository userRepository;
-    @Autowired
     private UserService userService;
 
     @PostMapping("register")
@@ -36,7 +34,6 @@ public class UserController {
         ResultMsg resp = userService.login(user);
         return new ResponseEntity<>(resp, HttpStatus.OK);
     }
-
 
     @RequestMapping("hello")
     public String hello() {

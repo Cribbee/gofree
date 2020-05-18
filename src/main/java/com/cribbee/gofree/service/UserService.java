@@ -16,16 +16,6 @@ public interface UserService {
 
 
     /**
-     * @param usr_name
-     * @param pwd
-     * @return
-     * @throws Exception
-     */
-    @Query("select s from User s where s.userName = ?1 and s.pwd = ?2")
-    User findUserByUsrNameAndPwd(String usr_name, String pwd);
-
-
-    /**
      * 注册
      *
      * @param user

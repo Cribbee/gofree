@@ -29,12 +29,6 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Override
-    @Transactional
-    public User findUserByUsrNameAndPwd(String usr_name, String pwd) {
-        return null;
-    }
-
 
     @Override
     public ResultMsg register(User user) {
@@ -45,10 +39,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResultMsg login(User user) {
-
         String usr_name = user.getUsr_name();
         String passwd = user.getPasswd();
-        User user_repo = findUserByUsrNameAndPwd(usr_name, passwd);
+        User user_repo = userRepository.findUserByUsrnameAndPwd(usr_name, passwd);
         if (user_repo != null) {
             ResultMsg resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(), user_repo);
             return resultMsg;
