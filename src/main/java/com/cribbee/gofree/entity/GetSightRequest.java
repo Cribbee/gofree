@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class GetSightRequest {
     Integer days;
-    Integer sights;
+    Integer sights_per;
 }
