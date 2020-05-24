@@ -31,7 +31,7 @@ public class SightServiceImpl implements SightService {
         ItineraryList itineraryList=new ItineraryList();
         itineraryList.setItineraries(new ArrayList<>());
         Itinerary itinerary=null;
-        int dayOrder=0;
+        int dayOrder=1;
         double  pricePerDay =0;
         for(int i=0;i<sights.size();i++){
             Sight sight=sights.get(i);
@@ -50,6 +50,7 @@ public class SightServiceImpl implements SightService {
             itinerary.getSights().add(sight);
             if(itinerary.getSights().size()==sightsPerDay){
                 itinerary.setPrice_per(pricePerDay);
+                pricePerDay=0;
             }
         }
         //在这里再计算总
