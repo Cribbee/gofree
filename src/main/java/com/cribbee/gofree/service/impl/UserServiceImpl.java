@@ -23,11 +23,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    @Override
-    @Transactional
-    public User getUserBuId(Integer id) {
-        return null;
-    }
+//    @Override
+//    @Transactional
+//    public User getUserBuId(Integer id) {
+//        return null;
+//    }
 
 
     @Override

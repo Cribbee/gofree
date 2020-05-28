@@ -1,6 +1,6 @@
 package com.cribbee.gofree.controller;
 
-import com.cribbee.gofree.entity.GetSightRequest;
+import com.cribbee.gofree.entity.SetItineraryRequest;
 import com.cribbee.gofree.service.SightService;
 import com.cribbee.gofree.util.ResultMsg;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +18,10 @@ public class SightController {
     @Autowired
     private SightService sightService;
 
-    @PostMapping("gettest")
-    public ResponseEntity<ResultMsg> register(@RequestBody GetSightRequest getSightRequest) {
-        ResultMsg resp = sightService.getSightsByDaysAndSightNum(getSightRequest);
-        return new ResponseEntity<>(resp, HttpStatus.OK);
+    @PostMapping("setItinerary")
+    public ResponseEntity<ResultMsg> setItinerary(@RequestBody SetItineraryRequest setItineraryRequest) {
+        ResultMsg resp = sightService.setItinerary(setItineraryRequest);
+        return new ResponseEntity<>(resp, HttpStatus.CREATED);
     }
 
     @RequestMapping("hello")

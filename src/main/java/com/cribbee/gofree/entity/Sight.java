@@ -1,5 +1,7 @@
 package com.cribbee.gofree.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 /**
@@ -11,7 +13,7 @@ import javax.persistence.*;
  **/
 
 
-
+@Data
 @Entity
 @Table(name = "sight")
 public class Sight {
@@ -72,6 +74,9 @@ public class Sight {
     //维度
     private Double lat;
 
+    //所属区
+    private String district;
+
 
 //    //所属景点id
 //    private Integer parent_id;
@@ -83,171 +88,5 @@ public class Sight {
     public Sight() {
     }
 
-    @Override
-    public String toString() {
-        return "Sight{" +
-                "id=" + id +
-                ", sight_name='" + sight_name + '\'' +
-                ", city_id=" + city_id +
-                ", score=" + score +
-                ", rank=" + rank +
-                ", cmt_num=" + cmt_num +
-                ", tag='" + tag + '\'' +
-                ", price=" + price +
-                ", addr='" + addr + '\'' +
-                ", url='" + url + '\'' +
-                ", pic1='" + pic1 + '\'' +
-                ", pic2='" + pic2 + '\'' +
-                ", info='" + info + '\'' +
-                ", open_time='" + open_time + '\'' +
-                ", sight_desc='" + sight_desc + '\'' +
-                ", tips='" + tips + '\'' +
-                ", lng=" + lng +
-                ", lat=" + lat +
-                '}';
-    }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getSight_name() {
-        return sight_name;
-    }
-
-    public void setSight_name(String sight_name) {
-        this.sight_name = sight_name;
-    }
-
-    public Integer getCity_id() {
-        return city_id;
-    }
-
-    public void setCity_id(Integer city_id) {
-        this.city_id = city_id;
-    }
-
-    public Double getScore() {
-        return score;
-    }
-
-    public void setScore(Double score) {
-        this.score = score;
-    }
-
-    public Integer getRank() {
-        return rank;
-    }
-
-    public void setRank(Integer rank) {
-        this.rank = rank;
-    }
-
-    public Integer getCmt_num() {
-        return cmt_num;
-    }
-
-    public void setCmt_num(Integer cmt_num) {
-        this.cmt_num = cmt_num;
-    }
-
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public String getAddr() {
-        return addr;
-    }
-
-    public void setAddr(String addr) {
-        this.addr = addr;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getPic1() {
-        return pic1;
-    }
-
-    public void setPic1(String pic1) {
-        this.pic1 = pic1;
-    }
-
-    public String getPic2() {
-        return pic2;
-    }
-
-    public void setPic2(String pic2) {
-        this.pic2 = pic2;
-    }
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    public String getOpen_time() {
-        return open_time;
-    }
-
-    public void setOpen_time(String open_time) {
-        this.open_time = open_time;
-    }
-
-    public String getSight_desc() {
-        return sight_desc;
-    }
-
-    public void setSight_desc(String sight_desc) {
-        this.sight_desc = sight_desc;
-    }
-
-    public String getTips() {
-        return tips;
-    }
-
-    public void setTips(String tips) {
-        this.tips = tips;
-    }
-
-    public Double getLng() {
-        return lng;
-    }
-
-    public void setLng(Double lng) {
-        this.lng = lng;
-    }
-
-    public Double getLat() {
-        return lat;
-    }
-
-    public void setLat(Double lat) {
-        this.lat = lat;
-    }
 }

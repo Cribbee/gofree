@@ -1,5 +1,7 @@
 package com.cribbee.gofree.util;
 
+import com.cribbee.gofree.entity.Personas;
+
 /**
  * ClassName: ResultStatusCode
  * Description: TODO
@@ -16,7 +18,12 @@ public enum ResultStatusCode {
     USR_NAME_EXISTED(252, "该用户名已存在"),
     NICK_NAME_EXISTED(253, "该昵称已存在"),
     PHONE_EXISTED(254, "该手机号已存在"),
-    EMAIL_EXISTED(252, "该邮箱已存在");
+    EMAIL_EXISTED(255, "该邮箱已存在"),
+    USR_NOT_EXISTED(256, "该用户不存在"),
+    PERSONAS_EXISTED(257, "该用户画像已存在"),
+
+    //行程rhythm
+    BAD_RHYTHM(258, "错误的旅行节奏参数");
 
 
 

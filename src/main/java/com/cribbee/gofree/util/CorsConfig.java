@@ -5,8 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 /**
  * ClassName: CorsConfig
@@ -20,9 +19,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CorsConfig {
     private CorsConfiguration buildConfig() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("http://localhost:3012"); // 1允许任何域名使用
+        corsConfiguration.addAllowedOrigin("*"); // 1允许任何域名使用
         corsConfiguration.addAllowedHeader("*"); // 2允许任何头
         corsConfiguration.addAllowedMethod("*"); // 3允许任何方法（post、get等）
+        corsConfiguration.setAllowCredentials(true);
         return corsConfiguration;
     }
 

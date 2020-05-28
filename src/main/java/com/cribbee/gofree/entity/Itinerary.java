@@ -10,15 +10,3 @@ public class Itinerary {
     List<Sight> sights;
     Double price_per;
 }
-
-/*
-
-{ "code":100,
-    "message":"成功",
-    "data":[
-    {
-
-}
-
-
- */
